@@ -5,18 +5,11 @@ Yujia Li, 11/2014
 """
 
 import cPickle as pickle
-#import sklearn.svm as svm
-import sklearn.linear_model as lm
 import time
 import numpy as np
 import gnumpy as gnp
 import core.generative as gen
 import core.kernels as ker
-
-def load_mnist_data():
-    with open('/ais/gobi3/u/yujiali/datasets/classification_data/mnist/mnist_real01.pdata') as f:
-        d = pickle.load(f)
-    return d['train_data'], d['test_data']
 
 def load_tfd_fold(fold=0):
     """
@@ -38,6 +31,7 @@ def linear_classifier_discrimination(model, data, C_range=[1], verbose=True, sam
     """
     Compute the logistic regression classification accuracy.
     """
+    import sklearn.linear_model as lm
     n_examples = data.shape[0]
     if samples is None:
         gnp.seed_rand(8)
