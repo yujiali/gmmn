@@ -7,7 +7,7 @@ If you use this code in your research you should cite the above paper.
 ### Dependencies
 To use the code you need to install some dependencies first:
 * Standard python packages like **numpy, scipy, matplotlib**.  matplotlib is only needed for visualization.  You may also need sklearn for some features.
-* [**gnumpy**](www.cs.toronto.edu/~tijmen/gnumpy.html).  If you have a NVIDIA GPU gnumpy can speed up your computation significantly.  To use GPUs you need to install [**cudamat**](https://github.com/cudamat/cudamat) first.  If you don't have a GPU you can use [**npmat**](www.cs.toronto.edu/~ilya/npmat.py) as a replacement for cudamat, then all computations will be done on a CPU.
+* [**gnumpy**](http://www.cs.toronto.edu/~tijmen/gnumpy.html).  If you have a NVIDIA GPU gnumpy can speed up your computation significantly.  To use GPUs you need to install [**cudamat**](https://github.com/cudamat/cudamat) first.  If you don't have a GPU you can use [**npmat**](http://www.cs.toronto.edu/~ilya/npmat.py) as a replacement for cudamat, then all computations will be done on a CPU.
 * The authors' lightweight neural network and optimization packages [**pynn**](https://github.com/yujiali/pynn) and [**pyopt**](https://github.com/yujiali/pyopt).
 
 Once you get all dependencies ready, try to run `python test.py`.  If you are running this with npmat then all tests should pass.  If you are running this on a GPU with cudamat then some tests will fail - this is expected because of the low numeric precision supported by cudamat (`float32` every where), but all tests should run and finish properly.
