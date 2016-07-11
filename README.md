@@ -17,3 +17,6 @@ Prepare the MNIST and TFD data, then go into the `dataio` directory, change path
 
 ### Train the models
 Use `python train.py -m <mode>` to train the corresponding model.  `<mode>` can be `mnistinput`, `mnistcode`, `tfdinput`, `tfdcode`, corresponding to the input space model and autoencoder code space model for the two datasets.
+
+##### Other resources
+There is a tensorflow implementation of GMMN provided by Siddharth Agrawal: https://github.com/siddharth-agrawal/Generative-Moment-Matching-Networks
